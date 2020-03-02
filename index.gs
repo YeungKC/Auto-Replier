@@ -2,6 +2,9 @@ var matchRegex = /^"([\s|\S]*)"/
 var replaceRegex = /[\s|\(|\)|-]/g
 
 function autoReplier() {
+  console.log(ContactsApp.getContactsByPhone('2098376571'))
+  return
+
   var labelObj = GmailApp.getUserLabelByName('SMS')
   var unreadCount = labelObj.getUnreadCount()
   var threads = labelObj.getThreads()
