@@ -11,7 +11,7 @@ function autoReplier() {
     if (thread.isUnread()) {
       thread.markRead()
 
-      var phone = thread.getMessages()[0].getFrom().replace(replaceRegex, '')
+      var phone = thread.getMessages()[0].getSubject().replace(replaceRegex, '')
       var contacts = ContactsApp.getContactsByPhone(phone)
 
       console.log('phone: ' + phone + ', contacts.length: ' + contacts.length)
